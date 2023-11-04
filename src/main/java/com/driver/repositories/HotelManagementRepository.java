@@ -25,7 +25,7 @@ public class HotelManagementRepository {
     public String addHotel(Hotel hotel){
         String hName = hotel.getHotelName();
 
-        if(hName.length() == 0 || hotel == null || hotelsMap.containsKey(hName)){
+        if(hName == null || hName.length() == 0 || hotel == null || hotelsMap.containsKey(hName)){
             return "FAILURE";
         }
         else{
